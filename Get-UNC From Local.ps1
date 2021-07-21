@@ -74,7 +74,7 @@ Write-Debug "Share Root  : $ShareRoot"
 Write-Debug "Mapped Loca : $MappedLoca"
 Write-Debug ""
 Write-Debug "Workin Path : $WorkinPath"
-Write-Debug "Manual Path : O:\Group - Hardware\Environment\Prosperity Domain\PCs\New PC Setup\Scripts"
+Write-Debug "Manual Path : O:\Group - Hardware\Environment\Domain\PCs\New PC Setup\Scripts"
 Write-Debug "PScmd  Path : $PSCommandPath "
 Write-Debug ""
 ### End of Debugging Block
