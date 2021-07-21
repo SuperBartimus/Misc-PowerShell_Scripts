@@ -3,15 +3,16 @@
 	Script to self-elevate and map a drive to the location it was it was started from
   
 .DESCRIPTION
-    This script is intended to go through the HK_Local_Machine registry and identify all 
-    accounts there in.  It will compare those accounts against a list of accounts specified 
-    in the variable $NoTouchProfiles.  If a match is obtained, deletion is not performed.
-
+    This script is intended to get PowerShell to self-elevate and map a drive letter to 
+    a \\Server\Share UNC path where the script is ran from based on the existing 
+    [letter]:\folder\[ThisScript].ps1 path.  It is to be a code snippet to be included into
+    a larger script to potentially execute Windows Batch (.BAT) scripts that reside on server
+    shares and need to be executed from same location.  Due to limitations of .BAT files, they
+    cannot be run over \\server\share\ paths and still access the filesystem of that location.
+    
 .PARAMETER <Parameter_Name>
     None, process driven
-    ! Important: Declare SID starting hash on line 97 of Script. (Profiles can be found @ HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\ )
-    ! Important: Declare Usernames to be excluded from deletion in variable $NoTouchProfiles
-
+   
 .CRITERIA
     Ability to run process with Admin Privileges
 
@@ -49,7 +50,7 @@ if (-Not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
 }
 
 ### Now running elevated so launch the script:
-Write-Host Elevated
+Write-Debug Elevated
 
 $Path = $PSCommandPath #Getting the FullPath of this script
 $MappedPath = $path
