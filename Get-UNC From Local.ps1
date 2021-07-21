@@ -22,7 +22,7 @@
 .NOTES
   Version:        1.0
   Author:         Bart Strauss / https://github.com/SuperBartimus
-  Link:           https://github.com/SuperBartimus/Misc-PowerShell_Scrip
+  Link:           https://github.com/SuperBartimus/Misc-PowerShell_Scripts/blob/main/Get-UNC%20From%20Local.ps1
   Creation Date:  2021 Jul 21
   Purpose/Change: Make it possible to run Batch scripts or other functions that require elevated permissions on a mapped drive.
 
